@@ -17,7 +17,6 @@ useEffect(() => {
 
 function handleSelect(e){
   updateSpell(e.target.value)
-  console.log(e.target.value)
 }
 
 if(!data){
@@ -31,6 +30,7 @@ return <div>
       return <option  key={index} value={result.url}> {result.index} </option>
     })}
     </select>
+    <Link to={{ pathname: '/spellinfo', state: { spell } }}>See rules</Link>
   </div>
   </div>
 }
